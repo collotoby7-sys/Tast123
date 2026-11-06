@@ -1,11 +1,7 @@
 name: Test Workflow
-on: 
-  issues:
-    types: [opened]
-
+on: issues
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Print issue title
-        run: echo "Issue title is: ${{ github.event.issue.title }}"
+      - run: echo ${{ github.event.issue.title }}
